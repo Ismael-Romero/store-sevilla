@@ -1,5 +1,8 @@
+const path = require("path");
+
+
 const routeHome = (req, res) => {
-    res.send('Home Page');
+    res.sendFile(path.resolve(__dirname, process.env.SRV_PATH_SITE));
 }
 
 module.exports = routeHome;
